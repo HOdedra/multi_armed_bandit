@@ -8,9 +8,9 @@ You go to the casino and you have a choice between many slot machines. The reaso
 each slot machine has a lever which you can pull and ultimately you are being robbed of your money. The win rate and distribution of 
 each slot machine is unknown. We need to maximise our winnings by pulling the slot machine with the highest win rate. However, 
 we don't know the win rate and the only way to find out is to play lots of machines. The dilemma in short is a trade off between exploring
-i.e. collecting data versus exploting i.e. using the best slot machine. Playing the machine we think is the best at that given time could be the same as playing a suboptimal bandit. 
+i.e. collecting data versus exploting i.e. using the best slot machine. Playing the machine we think is the best at that given time could be the same as playing a sub-optimal bandit. 
 
-### Solution 1: Epsilon-Greedy
+## Solution 1: Epsilon-Greedy
 
 The first solution is known as the epsilon-greedy strategy. How it works? - we use a value called epsilon which is a small number
 represented as a probability. This allows us to explore as every arm has a chance to be updated. 
@@ -22,9 +22,20 @@ Problem: in the Long-run we may continue to explore sub-optimal arms when we don
 
 ![Alt Text](http://g.recordit.co/WYAPWP43kd.gif) ![Alt Text](http://g.recordit.co/clAOImEZhu.gif)
 
+### Explanation of Results 
+
+The algorithm works by assigning three different means to three different bandits. In addition we experiment with three different epsilon values (10%, 5%, 1%):
+
+* Bandit 1 - mean = 1.0
+
+* Bandit 2 - mean = 2.0
+
+* Bandit 3 - mean = 3.0
+
+Ideally, we would like to keep pulling bandit 3 as this has the highest mean reward of 3.0. As you can see from the results the cumulative average converges to a mean of 3.0 as we would like it to. Our algorithm is learning, it is getting reinforced by previous good plays!
 
 
-### Solution 2: Optimistic Values
+## Solution 2: Optimistic Values
 
 
 
