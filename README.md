@@ -18,7 +18,7 @@ The best lever is selected for a proportion 1-epsilon  of the trials, and a leve
 
 Problem: in the Long-run we may continue to explore sub-optimal arms when we don't need to. 
 
-[Solution](experimenting_with_epsilon_bandit.py)
+[Solution 1](experimenting_with_epsilon_bandit.py)
 
 ![Alt Text](http://g.recordit.co/WYAPWP43kd.gif) ![Alt Text](http://g.recordit.co/clAOImEZhu.gif)
 
@@ -37,8 +37,18 @@ Ideally, we would like to keep pulling bandit 3 as this has the highest mean rew
 
 ## Solution 2: Optimistic Values
 
+In this solution we start with an assertion that the true mean is below 10. We pick a "high ceiling" for an initial estimate of the bandit mean. This is known as optimistic as we are essentially saying this mean is too good to be true and after each update we are getting closer to the true value. The mean should start to decrease. 
 
+Exploitation happens after we collect many samples and we are start to approach our true mean values. 
+Exploration happens when a mean of a bandit is too high. This forces us to explore that bandit. The mean will be higher than everything else. 
 
+We deploy only a greedy strategy here! 
+
+[Solution 2](optimistic_initial_values.py)
+
+![Alt Text](http://g.recordit.co/qjDWbn6DBr.gif) ![Alt Text](http://g.recordit.co/tUsbNRVHaB.gif)
+
+The Optimistic algorithm outperforms the epsilon-greedy solution
 
 
 ### Acknowledgments
