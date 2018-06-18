@@ -1,6 +1,6 @@
 # Multi Armed Bandit
 
-![Multi-armed-bandit](https://conversionxl.com/wp-content/uploads/2015/09/gambling-machine-4926_640-1.jpg)
+![Alt Text](https://conversionxl.com/wp-content/uploads/2015/09/gambling-machine-4926_640-1.jpg)
 
 ## Multi Armed Bandit Scenario
 
@@ -20,5 +20,16 @@ Problem: in the Long-run we may continue to explore sub-optimal arms when we don
 
 [Solution](experimenting_with_epsilon_bandit.py)
 
+![Alt Text](http://g.recordit.co/WYAPWP43kd.gif) ![Alt Text](http://g.recordit.co/clAOImEZhu.gif)
+
+
+
 ### Solution 2: Optimistic Values
 
+
+
+
+
+### Acknowledgments
+
+* thelazyprogrammer
