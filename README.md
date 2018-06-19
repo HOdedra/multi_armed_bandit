@@ -51,6 +51,9 @@ We deploy only a greedy strategy here!
 The Optimistic algorithm outperforms the epsilon-greedy solution
 
 
+## Solution 3: Upper-Confidence Bound (UCB)
+
+
 ### Acknowledgments
 
 * thelazyprogrammer
