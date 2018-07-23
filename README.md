@@ -53,6 +53,33 @@ The Optimistic algorithm outperforms the epsilon-greedy solution
 
 ## Solution 3: Upper-Confidence Bound (UCB)
 
+The Multi-armed bandit problem can also be applied to advertisement and I will be drawing upon a fictional case study to see both its applications and enable us to understand more specifically the UCB algorithm. 
+
+If we are to imagine we are running a campaign to market a product and we would like to discover and predict which is the better advert we would need to know the underlying distribution. By this I mean we must know which advert would be clicked the most therefore having the highest 'Click through rate'. One strategy is an AB test which is pure exploring but not exploitation however we would like to exploit whilst exploring. 
+
+Intuition:
+
+1. D ARMS = each arm is an advert
+2. Each time a user connects to the webpage that makes a round
+3. At each round n, we choose one ad to display to the user
+4. At each round n, ad i gives reward ri(n) which is either 0,1. Either 1 if advert is clicked or 0 otherwise. 
+5. Maximise the total reward we get over many rounds
+
+Important: We don't know the distributions of each campaign but we need to maximise the return as the campaign is ongoing. 
+
+What the algorithm does:
+We will firstly assume a starting point and assume each advert has the same return. The formula creates a confidence bound which includes the actual expected return. For the first couple of rounds we will run it just as an experiment. We only care about the upper bound within this confidence interval and hence the name Upper Confidnce Bound Algorithm. The algorithm then pulls a lever on a random machine and we see whether the user clicked on it. If it wasn't  clicked the observed average will fall. Due to the Law of Large numbers this observed average should converge to the expected average. As we continue to run through this algorithm the confidence interval becomes smaller because we have an initial observation making us slightly more confident. After completing this we then find the next advert with the highest confidence bound. This impacts the average. We keep doing this until we find the highest confidence bound. Also by exploring options we are decreasing the confidence bound. 
+
+DATASET - dataset containing 10,000 users and what they would click if shown an advert. This is like a 'God File'. A scenario where we are all knowing. 
+
+The code is linked below of which I have included a random strategy and the UCB algorithm. 
+
+[Random] 
+
+[UCB_CTR]
+
+
+
 
 ### Acknowledgments
 
