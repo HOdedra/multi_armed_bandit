@@ -74,9 +74,7 @@ DATASET - dataset containing 10,000 users and what they would click if shown an 
 
 The code is linked below of which I have included a random strategy and the UCB algorithm. 
 
-[Random] 
-
-[UCB_CTR]
+[Random & UCB_CTR](ucb_algo_ctr.py)
 
 
 
