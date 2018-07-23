@@ -70,7 +70,7 @@ Important: We don't know the distributions of each campaign but we need to maxim
 What the algorithm does:
 We will firstly assume a starting point and assume each advert has the same return. The formula creates a confidence bound which includes the actual expected return. For the first couple of rounds we will run it just as an experiment. We only care about the upper bound within this confidence interval and hence the name Upper Confidnce Bound Algorithm. The algorithm then pulls a lever on a random machine and we see whether the user clicked on it. If it wasn't  clicked the observed average will fall. Due to the Law of Large numbers this observed average should converge to the expected average. As we continue to run through this algorithm the confidence interval becomes smaller because we have an initial observation making us slightly more confident. After completing this we then find the next advert with the highest confidence bound. This impacts the average. We keep doing this until we find the highest confidence bound. Also by exploring options we are decreasing the confidence bound. 
 
-DATASET - dataset containing 10,000 users and what they would click if shown an advert. This is like a 'God File'. A scenario where we are all knowing. 
+[DATASET] (Ads_CTR_Optimisation.csv) - dataset containing 10,000 users and what they would click if shown an advert. This is like a 'God File'. A scenario where we are all knowing. 
 
 The code is linked below of which I have included a random strategy and the UCB algorithm. 
 
